@@ -84,6 +84,7 @@ document.getElementById('open-or-join-room').onclick = function() {
         else if (connection.isInitiator === true) {
             // if room doesn't exist, it means that current user will create the room
             showRoomURL(roomid);
+          document.getElementById('open-or-join-room').style.display="none"
         }
     });
 };
