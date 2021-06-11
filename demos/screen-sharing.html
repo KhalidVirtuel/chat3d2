@@ -7,50 +7,22 @@
   <link rel="shortcut icon" href="/demos/logo.png">
   <link rel="stylesheet" href="/demos/stylesheet.css">
   <script src="/demos/menu.js"></script>
+  <style>
+    body { background-color: rgb(22, 21, 21); margin: none; }
+     iframe { position: fixed; top: 50px; left: 10px;  }
+  </style>
 </head>
 <body>
-  <header>
-    <a class="logo" href="/"><img src="/demos/logo.png" alt="RTCMultiConnection"></a>
-    <a href="/" class="menu-explorer">Menu<img src="/demos/menu-icon.png" alt="Menu"></a>
-    <nav>
-      <li>
-        <a href="/">Home</a>
-      </li>
-      <li>
-        <a href="/demos/">Demos</a>
-      </li>
-      <li>
-        <a href="https://www.rtcmulticonnection.org/docs/getting-started/">Getting Started</a>
-      </li>
-      <li>
-        <a href="https://www.rtcmulticonnection.org/FAQ/">FAQ</a>
-      </li>
-      <li>
-        <a href="https://www.youtube.com/playlist?list=PLPRQUXAnRydKdyun-vjKPMrySoow2N4tl">YouTube</a>
-      </li>
-      <li>
-        <a href="https://github.com/muaz-khan/RTCMultiConnection/wiki">Wiki</a>
-      </li>
-      <li>
-        <a href="https://github.com/muaz-khan/RTCMultiConnection">Github</a>
-      </li>
-    </nav>
-  </header>
-<iframe src="https://desolate-wildwood-26674.herokuapp.com/demos/video-conferencing.html" title="W3Schools Free Online Web Tutorials" width="100%" height="500">
+
+<iframe src="/demos/video-conferencing.html" width="150" height="300"  border="0">
 </iframe>
-  <h1>
-    Screen Sharing using RTCMultiConnection
-    <p class="no-mobile">
-      Multi-user (one-to-many) screen sharing using star topology.
-    </p>
-  </h1>
+
 
   <section class="make-center">
     <input type="text" id="room-id" value="abcdef" autocorrect=off autocapitalize=off size=20>
-    <button id="open-room">Open Room</button>
-    <button id="join-room">Join Room</button>
+    <button id="open-room" style="display: none;">Open Room</button>
+    <button id="join-room"  style="display: none;">Join Room</button>
     <button id="open-or-join-room">Auto Open Or Join Room</button>
-
     <div id="videos-container" style="margin: 20px 0;"></div>
 
     <div id="room-urls" style="text-align: center;display: none;background: #F1EDED;margin: 15px -10px;border: 1px solid rgb(189, 189, 189);border-left: 0;border-right: 0;"></div>
