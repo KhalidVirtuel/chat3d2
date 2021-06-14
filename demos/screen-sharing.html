@@ -9,20 +9,20 @@
   <script src="/demos/menu.js"></script>
   <style>
     body { background-color: rgb(22, 21, 21); margin: none; }
-     iframe { position: fixed; top: 5%; left: 5%; border:0  }
+     iframe { position: fixed; top: 50px; left: 10px;  }
   </style>
 </head>
 <body>
 
-<iframe src="/demos/video-conferencing.html" width="400" height="120"  border="0">
+<iframe src="/demos/video-conferencing.html" width="150" height="300"  border="0">
 </iframe>
 
 
   <section class="make-center">
-    <input type="text" id="room-id" value="abcdef" autocorrect=off autocapitalize=off size=20>
+    <input type="hidden" id="room-id" value="147" autocorrect=off autocapitalize=off size=20>
     <button id="open-room" style="display: none;">Open Room</button>
     <button id="join-room"  style="display: none;">Join Room</button>
-    <button id="open-or-join-room">Partager</button>
+    <button id="open-or-join-room">Auto Open Or Join Room</button>
     <div id="videos-container" style="margin: 20px 0;"></div>
 
     <div id="room-urls" style="text-align: center;display: none;background: #F1EDED;margin: 15px -10px;border: 1px solid rgb(189, 189, 189);border-left: 0;border-right: 0;"></div>
@@ -250,6 +250,7 @@ if (hashString.length && hashString.indexOf('comment-') == 0) {
 var roomid = params.roomid;
 if (!roomid && hashString.length) {
     roomid = hashString;
+    alert(hashString)
 }
 
 if (roomid && roomid.length) {
