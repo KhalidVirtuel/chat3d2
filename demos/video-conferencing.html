@@ -9,9 +9,7 @@
   <script src="/demos/menu.js"></script>
 </head>
 <body>
-
-
-  <section class="make-center">
+  <section class="">
     <div>
       <div style="display: none;">
       <label><input type="checkbox" id="record-entire-conference"> Record Entire Conference In The Browser?</label>
@@ -19,11 +17,10 @@
       <button id="btn-stop-recording" style="display: none;">Stop Recording</button>
       <br><br>
     </div>
-      <input type="text" id="room-id" value="abcdef" autocorrect=off autocapitalize=off size=20>
+      <input type="hidden" id="room-id" value="123" autocorrect=off autocapitalize=off size=20 >
       <button id="open-room" style="display: none;">Open Room</button>
       <button id="join-room" style="display: none;">Join Room</button>
-      <button id="open-or-join-room" >Video</button>
-
+      <button id="open-or-join-room" >Auto Open Or Join Room</button>
     </div>
     <div id="videos-container" style="margin: 5px;"></div>
 
@@ -84,7 +81,7 @@ document.getElementById('open-or-join-room').onclick = function() {
         else if (connection.isInitiator === true) {
             // if room doesn't exist, it means that current user will create the room
             showRoomURL(roomid);
-          document.getElementById('open-or-join-room').style.display="none"
+            document.getElementById('open-or-join-room').style.display="none"
         }
     });
 };
@@ -391,6 +388,7 @@ if (hashString.length && hashString.indexOf('comment-') == 0) {
 var roomid = params.roomid;
 if (!roomid && hashString.length) {
     roomid = hashString;
+     alert(hashString)
 }
 
 if (roomid && roomid.length) {
