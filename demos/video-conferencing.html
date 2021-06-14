@@ -375,7 +375,7 @@ if (localStorage.getItem(connection.socketMessageEvent)) {
 }
 
 var txtRoomId = document.getElementById('room-id');
-txtRoomId.value = roomid;
+txtRoomId.value = '123';
 txtRoomId.onkeyup = txtRoomId.oninput = txtRoomId.onpaste = function() {
     localStorage.setItem(connection.socketMessageEvent, document.getElementById('room-id').value);
 };
