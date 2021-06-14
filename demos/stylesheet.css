@@ -260,15 +260,21 @@ button[disabled], input[disabled] {
 /*************************/
 .media-box h2
 {
-	display: none;
+	display: none !important;
 }
 
 #room-urls
 {
-	display: none;
+	display: none !important;
 }
 
 .media-container
 {
-display: block;
+display: block !important;
+width: 100% !important;
+}
+
+.media-controls .control:first-child
+{
+	display: none !important;
 }
