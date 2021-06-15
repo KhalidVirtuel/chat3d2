@@ -278,3 +278,8 @@ width: 100% !important;
 {
 	display: none !important;
 }
+
+iframe
+{
+border:0 !important;
+}
