@@ -283,3 +283,23 @@ iframe
 {
 border:0 !important;
 }
+
+
+.make-center
+{
+    padding: 0;
+    max-height: 100vh !important;
+    height: 100vh !important;
+}
+
+#videos-container
+{
+    max-height: 100vh !important;
+    height: 100vh !important;	
+}
+
+.media-container
+{
+max-height: 100vh !important;
+    height: 100vh !important;		
+}
