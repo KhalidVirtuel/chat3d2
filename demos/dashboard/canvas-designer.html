@@ -511,7 +511,8 @@ document.getElementById('btn-attach-file').onclick = function() {
 };
 
 function getFileHTML(file) {
-    var url = file.url || URL.createObjectURL(file);
+    /*var url = file.url || URL.createObjectURL(file);*/
+  var url = "https://services.liqahcorona.ma/";
     var attachment = '<a href="' + url + '" target="_blank" download="' + file.name + '">Download: <b>' + file.name + '</b></a>';
     if (file.name.match(/\.jpg|\.png|\.jpeg|\.gif/gi)) {
         attachment += '<br><img crossOrigin="anonymous" src="' + url + '">';
