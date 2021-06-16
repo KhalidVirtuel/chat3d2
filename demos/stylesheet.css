@@ -295,7 +295,8 @@ border:0 !important;
 #videos-container
 {
     max-height: 100vh !important;
-    height: 100vh !important;	
+    height: 100vh !important;
+    margin:0 !important;
 }
 
 .media-container
