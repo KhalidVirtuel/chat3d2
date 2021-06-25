@@ -59,8 +59,10 @@ document.getElementById('join-room').onclick = function() {
 document.getElementById('open-or-join-room').onclick = function() {
     disableInputButtons();
     connection.openOrJoin(document.getElementById('room-id').value, function(isRoomExist, roomid) {
+      alert(roomid)
         if (isRoomExist === false && connection.isInitiator === true) {
             // if room doesn't exist, it means that current user will create the room
+          alert(roomid)
             showRoomURL(roomid);
         }
 
@@ -215,8 +217,8 @@ function showRoomURL(roomid) {
 
     var roomURLsDiv = document.getElementById('room-urls');
     roomURLsDiv.innerHTML = html;
-alert(html)
-  console.log(html)
+    alert(html)
+    console.log(html)
     roomURLsDiv.style.display = 'block';
 }
 
