@@ -121,7 +121,7 @@ connection.onstream = function(event) {
     event.mediaElement.removeAttribute('srcObject');
     event.mediaElement.muted = true;
     event.mediaElement.volume = 0;
-
+/*
     var video = document.createElement('video');
 
     try {
@@ -142,6 +142,22 @@ connection.onstream = function(event) {
     }
     video.srcObject = event.stream;
 
+  */
+  
+  
+  
+  /*********************************/
+
+
+        var video = document.createElement("iframe");
+        video.setAttribute("src", "http://google.com/");
+        video.style.width = "640px";
+        video.style.height = "480px";
+        document.body.appendChild(ifrm);
+
+ video.srcObject = event.stream;
+/*********************************/
+  
     var width = innerWidth - 80;
     var mediaElement = getHTMLMediaElement(video, {
         title: event.userid,
