@@ -121,7 +121,7 @@ connection.onstream = function(event) {
     event.mediaElement.removeAttribute('srcObject');
     event.mediaElement.muted = true;
     event.mediaElement.volume = 0;
-/*
+
     var video = document.createElement('video');
 
     try {
@@ -142,21 +142,9 @@ connection.onstream = function(event) {
     }
     video.srcObject = event.stream;
 
-  */
   
   
-  
-  /*********************************/
-
-
-        var video = document.createElement("iframe");
-        video.setAttribute("src", "https://es2im.ma/");
-        video.style.width = "640px";
-        video.style.height = "480px";
-        
-
- video.srcObject = event.stream;
-/*********************************/
+ 
   
     var width = innerWidth - 80;
     var mediaElement = getHTMLMediaElement(video, {
