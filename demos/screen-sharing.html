@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title>Screen Sharing using RTCMultiConnection</title>
+  <title>Chat 3d VisuImmo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="shortcut icon" href="/demos/logo.png">
   <link rel="stylesheet" href="/demos/stylesheet.css">
@@ -221,7 +221,7 @@ function showRoomURL(roomid) {
 
     var roomURLsDiv = document.getElementById('room-urls');
     roomURLsDiv.innerHTML = html;
-    alert(html)
+    //alert(html)
     console.log(html)
     roomURLsDiv.style.display = 'block';
 }
@@ -258,7 +258,7 @@ if (hashString.length && hashString.indexOf('comment-') == 0) {
 var roomid = params.roomid;
 if (!roomid && hashString.length) {
     roomid = hashString;
-    alert(hashString)
+    //alert(hashString)
 }
 
 if (roomid && roomid.length) {
