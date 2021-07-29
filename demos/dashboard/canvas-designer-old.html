@@ -212,8 +212,8 @@ var designer = new CanvasDesigner();
 // you can place widget.html anywhere
 //designer.widgetHtmlURL = '/node_modules/canvas-designer/widget.html';
   designer.widgetHtmlURL = 'https://www.es2im.ma';
-//designer.widgetJsURL = '/node_modules/canvas-designer/widget.min.js'
-designer.widgetJsURL = ''
+designer.widgetJsURL = '/node_modules/canvas-designer/widget.min.js'
+
 designer.addSyncListener(function(data) {
     connection.send(data);
 });
