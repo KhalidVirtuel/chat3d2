@@ -210,11 +210,14 @@ connection.maxParticipantsAllowed = 1000;
 var designer = new CanvasDesigner();
 
 // you can place widget.html anywhere
-//designer.widgetHtmlURL = '/node_modules/canvas-designer/widget.html';
-  designer.widgetHtmlURL = 'https://www.es2im.ma';
+designer.widgetHtmlURL = '/node_modules/canvas-designer/widget.html';
+ // designer.widgetHtmlURL = 'https://www.es2im.ma';
 designer.widgetJsURL = '/node_modules/canvas-designer/widget.min.js'
 
 designer.addSyncListener(function(data) {
+  console.log("data");
+  alert("data")
+  console.log(data);
     connection.send(data);
 });
 
@@ -275,6 +278,9 @@ connection.onUserStatusChanged = function(event) {
 };
 
 connection.onopen = function(event) {
+   console.log("event");
+  alert("event")
+  console.log(event);
     connection.onUserStatusChanged(event);
 
     if (designer.pointsLength <= 0) {
@@ -292,6 +298,7 @@ connection.onopen = function(event) {
     }
 
     if(params.demoType === 'canvas-stream') {
+      alert('canvas-stream')
         connection.send({
             showMainVideo: true
         }, event.userid);
