@@ -112,6 +112,8 @@ connection.iceServers = [{
 
 connection.videosContainer = document.getElementById('videos-container');
 connection.onstream = function(event) {
+  alert("event 1")
+  console.log(event);
     var existing = document.getElementById(event.streamid);
     if(existing && existing.parentNode) {
       existing.parentNode.removeChild(existing);
@@ -121,7 +123,8 @@ connection.onstream = function(event) {
     event.mediaElement.removeAttribute('srcObject');
     event.mediaElement.muted = true;
     event.mediaElement.volume = 0;
-
+    alert("event 100")
+    console.log(event);
     var video = document.createElement('video');
 
     try {
@@ -164,6 +167,8 @@ connection.onstream = function(event) {
 };
 
 connection.onstreamended = function(event) {
+  alert("event 2")
+  console.log(event);
     var mediaElement = document.getElementById(event.streamid);
     if (mediaElement) {
         mediaElement.parentNode.removeChild(mediaElement);
