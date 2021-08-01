@@ -168,7 +168,7 @@ hr {
         <img id="btn-share-screen" src="https://www.webrtc-experiment.com/images/share-screen.png" title="Share Your Screen">
     </div>
   
-    <iframe id="temp-stream-canvas" src="https://my.matterport.com/show/?m=eHWpdnY4rz1"></iframe>
+    <canvas id="temp-stream-canvas" style="display: none;"></canvas>
 </div>
 </article>
 
@@ -210,8 +210,8 @@ connection.maxParticipantsAllowed = 1000;
 var designer = new CanvasDesigner();
 
 // you can place widget.html anywhere
-designer.widgetHtmlURL = '/node_modules/canvas-designer/widget.html';
- // designer.widgetHtmlURL = 'https://www.es2im.ma';
+//designer.widgetHtmlURL = '/node_modules/canvas-designer/widget.html';
+ designer.widgetHtmlURL = 'https://my.matterport.com/show/?m=eHWpdnY4rz1';
 designer.widgetJsURL = '/node_modules/canvas-designer/widget.min.js'
 
 designer.addSyncListener(function(data) {
