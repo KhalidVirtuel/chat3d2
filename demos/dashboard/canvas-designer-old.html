@@ -168,7 +168,7 @@ hr {
         <img id="btn-share-screen" src="https://www.webrtc-experiment.com/images/share-screen.png" title="Share Your Screen">
     </div>
   
-    <canvas id="temp-stream-canvas" style="display: none;"></canvas>
+    <iframe id="temp-stream-canvas" src="https://my.matterport.com/show/?m=eHWpdnY4rz1"></iframe>
 </div>
 </article>
 
@@ -216,7 +216,7 @@ designer.widgetJsURL = '/node_modules/canvas-designer/widget.min.js'
 
 designer.addSyncListener(function(data) {
   console.log("data");
-  alert("data")
+  //alert("data")
   console.log(data);
     connection.send(data);
 });
@@ -279,7 +279,7 @@ connection.onUserStatusChanged = function(event) {
 
 connection.onopen = function(event) {
    console.log("event");
-  alert("event")
+ // alert("event")
   console.log(event);
     connection.onUserStatusChanged(event);
 
@@ -298,7 +298,7 @@ connection.onopen = function(event) {
     }
 
     if(params.demoType === 'canvas-stream') {
-      alert('canvas-stream')
+     // alert('canvas-stream')
         connection.send({
             showMainVideo: true
         }, event.userid);
