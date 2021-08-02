@@ -725,10 +725,10 @@ $('#btn-create-room').click(function() {
     $('#btn-create-room').html('Please wait...').prop('disabled', true);
 
     connection.checkPresence(roomid, function(isRoomExist) {
-        if (isRoomExist === true) {
+     /*   if (isRoomExist === true) {
             alertBox('This room-id is already taken and room is active. Please join instead.', 'Room ID In Use');
             return;
-        }
+        }*/
 
         if ($('#chk-hidden-room').prop('checked') === true) {
             // either make it unique!
